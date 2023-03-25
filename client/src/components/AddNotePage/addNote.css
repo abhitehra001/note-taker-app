@@ -1,0 +1,13 @@
+#addPage{
+    height: 70vh;
+    background: linear-gradient(0deg,white,rgb(90, 206, 131)) ;
+    padding: 100px;
+}
+#textBox{
+    min-height: 50px;
+}
+#desc{
+    width: 100%;
+    border: 1px solid black;
+    min-height: 100px;
+}

@@ -1,0 +1,50 @@
+#homePageContainer{
+    min-height: 80vh;
+    padding-top: 50px;
+    background: linear-gradient(0deg, white, gray);
+}
+#homePageContainer>#searchContainer{
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#homePageContainer>#searchContainer>input{
+    margin-right: 5px;
+    width: 400px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0px 0px 5px grey;
+    padding-left: 20px;
+}
+#homePageContainer>#searchContainer>img{
+    margin-left: -40px;
+    width: 20px;
+    height: 20px;
+}
+#notesContainer{
+    width: fit-content;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: auto;
+}
+#notesContainer>.notes{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px grey;
+    margin-bottom: 20px;
+    min-height: 100px;
+    padding: 20px;
+    width: 800px;
+}
+#notesContainer>.notes>.time{
+    border-bottom: 1px dashed gray;
+    color: grey;
+    margin-bottom: 10px;
+}
+#notesContainer>.notes>.title{
+    font-weight: 500;
+}

@@ -1,0 +1,51 @@
+#registerPage{
+    height: 70vh;
+    background: linear-gradient(0deg,white,rgb(206, 115, 90)) ;
+    padding: 100px;
+}
+form{
+    margin: auto;
+    width: 400px;
+    background-color: white;
+    border-radius: 20px;
+    min-height: 300px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+#registerPage>form>#checkInput{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+#registerPage>form>#checkInput>#inputCheckbox{
+    height: 20px;
+    width: 50px;
+}
+form>h1{
+    text-align: center;
+}
+form>input{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+form>label{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+form>div>input{
+    width: 60%;
+}
+form>div:last-child{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+form>div:last-child>button{
+    color: white;
+    background-color: rgb(77, 163, 123);
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+}
