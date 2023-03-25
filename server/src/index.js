@@ -12,11 +12,13 @@ const { authenticateSession } = require("./authentication/Auth");
 dotenv.config();
 
 const port = 8000;
-const mongoUrl = "mongodb+srv://abhitehra001:abhitehra001@todolist.aqoxzwj.mongodb.net/";
 const sessionSecret = "It's a secret";
 
-mongoose.connect(mongoUrl).then(() => {
+mongoose.connect("mongodb+srv://noteTaker:nodetaker@notes.jqd7hpr.mongodb.net/?retryWrites=true&w=majority").then(() => {
     console.log("Connected to Mongo DB Atlas");
+}).catch(err=>{
+    console.log("Error in connecting to mongo db atlas);
+     console.log(err);
 })
 
 const app = express();
