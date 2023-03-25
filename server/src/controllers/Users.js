@@ -5,8 +5,8 @@ const jwt = require("jsonwebtoken");
 
 dotenv.config();
 
-const saltRounds = parseInt(process.env.SALT_ROUNDS || 10);
-const jwtSecretKey = process.env.JWT_SECRET_KEY || "secret";
+const saltRounds = 10;
+const jwtSecretKey = "It's a Secret";
 
 const loginUser = (req, res) => {
     Users.findOne({email: req.body.email}).then(data=>{
