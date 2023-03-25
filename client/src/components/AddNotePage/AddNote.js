@@ -17,7 +17,7 @@ const AddNote = () => {
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         const date = new Date();
         data.onTime = `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()} ${date.toLocaleTimeString()}`;
-        axios.post("http://localhost:8000/notes/add", data, {withCredentials:true}).then(response=>{
+        axios.post("https://node-taker-app-backend.onrender.com/notes/add", data, {withCredentials:true}).then(response=>{
             if(response.data.msg==="Note Added Successfully"){
                 Swal.fire({
                     position: "center",

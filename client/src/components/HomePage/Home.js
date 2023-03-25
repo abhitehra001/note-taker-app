@@ -8,7 +8,7 @@ const Home = ({setNoteId}) => {
     const [data, setData] = useState([]);
     const navigate = useNavigate();
     const retreiveData = () => {
-        axios.get("http://localhost:8000/notes/all", {withCredentials:true}).then((response)=>{
+        axios.get("https://node-taker-app-backend.onrender.com/notes/all", {withCredentials:true}).then((response)=>{
             setData(response.data);
         })
     }

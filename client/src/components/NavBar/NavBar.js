@@ -7,7 +7,7 @@ import "./navbar.css";
 const NavBar = () => {
     const navigate = useNavigate();
     const checkLogIn = () => {
-        axios.get("http://localhost:8000/check", { withCredentials: true }).then(response => {
+        axios.get("https://node-taker-app-backend.onrender.com/check", { withCredentials: true }).then(response => {
             console.log(response.data)
             if (response.data.msg === "UnAuthorized or Session Expired") {
                 Swal.fire({
@@ -37,7 +37,7 @@ const NavBar = () => {
             <p>Add Note</p>
         </div>
         <div onClick={() => {
-            axios.get("http://localhost:8000/notes/delete/all", { withCredentials: true }).then((response) => {
+            axios.get("https://node-taker-app-backend.onrender.com/notes/delete/all", { withCredentials: true }).then((response) => {
                 Swal.fire({
                     position: "center",
                     icon: "success",
@@ -58,7 +58,7 @@ const NavBar = () => {
         </div>
         <div onClick={() => {
             console.log("clicked logout")
-            axios.get("http://localhost:8000/users/logout", { withCredentials: true }).then((response) => {
+            axios.get("https://node-taker-app-backend.onrender.com/users/logout", { withCredentials: true }).then((response) => {
                 Swal.fire({
                     position: "center",
                     icon: "success",

@@ -11,7 +11,7 @@ const Register = () => {
         password: "",
         confirmPassword: "",
     })
-    axios.get("http://localhost:8000/check", { withCredentials:true }).then(response=>{
+    axios.get("https://node-taker-app-backend.onrender.com/check", { withCredentials:true }).then(response=>{
         if(response.data.msg==="User Authenticated"){
             navigate("/home");
         }
@@ -19,7 +19,7 @@ const Register = () => {
     const submitHandler = (e) =>{
         e.preventDefault();
         if(data.email.includes("@") && data.password===data.confirmPassword){
-            axios.post("http://localhost:8000/users/register", {
+            axios.post("https://node-taker-app-backend.onrender.com/users/register", {
                 email: data.email,
                 password: data.password
             }).then(response=>{
