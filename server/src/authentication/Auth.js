@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const jwtSecretKey = process.env.JWT_SECRET_KEY || "secret";
+const jwtSecretKey = "It's a Secret";
 
 const authenticateSession = (req, res, next) => {
     try{

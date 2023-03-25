@@ -11,10 +11,10 @@ const { authenticateSession } = require("./authentication/Auth");
 
 dotenv.config();
 
-const port = parseInt(process.env.PORT || 8000);
-const mongoUrl = process.env.MONGO_URL || "mongodb://127.0.0.1:27017";
-const sessionSecret = process.env.SESSION_KEY || "secret";
-const originUrl = process.env.ORIGIN_URL || "http://localhost:3000"
+const port = 8000;
+const mongoUrl = "mongodb+srv://noteTaker:nodeTaker@notes.jqd7hpr.mongodb.net/?retryWrites=true&w=majority";
+const sessionSecret = "It's a secret";
+const originUrl = "https://node-taker-app.netlify.app"
 
 mongoose.connect(mongoUrl).then(() => {
     console.log("Connected to Mongo DB Atlas");
