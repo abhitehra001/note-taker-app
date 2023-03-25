@@ -14,7 +14,6 @@ dotenv.config();
 const port = 8000;
 const mongoUrl = "mongodb+srv://noteTaker:nodeTaker@notes.jqd7hpr.mongodb.net/?retryWrites=true&w=majority";
 const sessionSecret = "It's a secret";
-const originUrl = "https://abhi-note-taker-app.netlify.app"
 
 mongoose.connect(mongoUrl).then(() => {
     console.log("Connected to Mongo DB Atlas");
@@ -24,8 +23,7 @@ const app = express();
 app.set('trust proxy', 1)
 app.use(cors({
     credentials: true,
-    origin: originUrl,
-    allowedHeaders:"*"
+    origin: "https://abhi-note-taker-app.netlify.app/"
 }))
 app.use(session({
     resave: false,
