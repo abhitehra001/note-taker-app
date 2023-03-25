@@ -14,7 +14,7 @@ dotenv.config();
 const port = 8000;
 const mongoUrl = "mongodb+srv://noteTaker:nodeTaker@notes.jqd7hpr.mongodb.net/?retryWrites=true&w=majority";
 const sessionSecret = "It's a secret";
-const originUrl = "https://node-taker-app.netlify.app"
+const originUrl = "https://abhi-note-taker-app.netlify.app"
 
 mongoose.connect(mongoUrl).then(() => {
     console.log("Connected to Mongo DB Atlas");
