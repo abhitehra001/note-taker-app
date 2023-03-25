@@ -12,7 +12,7 @@ const { authenticateSession } = require("./authentication/Auth");
 dotenv.config();
 
 const port = 8000;
-const mongoUrl = "mongodb+srv://noteTaker:nodeTaker@notes.jqd7hpr.mongodb.net/?retryWrites=true&w=majority";
+const mongoUrl = "mongodb+srv://abhitehra001:abhitehra001@todolist.aqoxzwj.mongodb.net/?retryWrites=true&w=majority";
 const sessionSecret = "It's a secret";
 
 mongoose.connect(mongoUrl).then(() => {
