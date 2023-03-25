@@ -35,6 +35,8 @@ const Home = ({setNoteId}) => {
             <div className="title">{notes.title}</div>
             <div className="description">{notes.description}</div>
             </div>
+            }else{
+                return "";
             }
         }) : <p>No Notes Yet</p>
     }
