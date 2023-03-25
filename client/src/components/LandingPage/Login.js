@@ -11,7 +11,7 @@ const Login = () => {
         password: ""
     })
     const checkLogIn = () => {
-        axios.get("http://localhost:8000/check", { withCredentials:true }).then(response=>{
+        axios.get("https://node-taker-app-backend.onrender.com/check", { withCredentials:true }).then(response=>{
             console.log(response.data);
             if(response.data.msg==="User Authenticated"){
                 navigate("/home");
@@ -23,7 +23,7 @@ const Login = () => {
     const submitHandler = (e) =>{
         e.preventDefault();
         if(data.email.includes("@")){
-            axios.post("http://localhost:8000/users/login", data, {withCredentials:true}).then(response=>{
+            axios.post("https://node-taker-app-backend.onrender.com/users/login", data, {withCredentials:true}).then(response=>{
                 if(response.data.msg==="LoggedIn Successfully"){
                     swal.fire({
                         position: "center",

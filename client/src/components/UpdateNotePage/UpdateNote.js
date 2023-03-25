@@ -13,7 +13,7 @@ const UpdateNote = ({noteId}) => {
         onTime: ""
     })
     useEffect(()=>{
-        axios.get(`http://localhost:8000/notes/one/${noteId}`, { withCredentials:true }).then(response=>{
+        axios.get(`https://node-taker-app-backend.onrender.com/notes/one/${noteId}`, { withCredentials:true }).then(response=>{
             console.log(response.data);
             setData({
                 title: response.data.title,
@@ -27,7 +27,7 @@ const UpdateNote = ({noteId}) => {
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         const date = new Date();
         data.onTime = `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()} ${date.toLocaleTimeString()}`;
-        axios.post(`http://localhost:8000/notes/${noteId}`, data, {withCredentials:true}).then(response=>{
+        axios.post(`https://node-taker-app-backend.onrender.com/notes/${noteId}`, data, {withCredentials:true}).then(response=>{
             if(response.data.msg==="Note Updated Successfully"){
                 Swal.fire({
                     position: "center",
@@ -56,7 +56,7 @@ const UpdateNote = ({noteId}) => {
             <div>
                 <button type="submit">Update</button>
                 <button onClick={()=>{
-                    axios.get(`http://localhost:8000/notes/delete/${noteId}`, { withCredentials: true }).then((response) => {
+                    axios.get(`https://node-taker-app-backend.onrender.com/notes/delete/${noteId}`, { withCredentials: true }).then((response) => {
                         Swal.fire({
                             position: "center",
                             icon: "success",
