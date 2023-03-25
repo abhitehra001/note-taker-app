@@ -33,7 +33,6 @@ app.use(session({
     secret: sessionSecret,
     cookie: {
         secure: true,
-        httpOnly: true,
         maxAge: 60*60*1000, // 10 minutes
         sameSite: "none"
     }
