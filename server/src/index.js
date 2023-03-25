@@ -17,7 +17,7 @@ const sessionSecret = "It's a secret";
 mongoose.connect("mongodb+srv://noteTaker:nodetaker@notes.jqd7hpr.mongodb.net/?retryWrites=true&w=majority").then(() => {
     console.log("Connected to Mongo DB Atlas");
 }).catch(err=>{
-    console.log("Error in connecting to mongo db atlas);
+    console.log("Error in connecting to mongo db atlas");
      console.log(err);
 })
 
