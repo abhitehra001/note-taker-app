@@ -18,11 +18,13 @@ const Register = () => {
     })
     const submitHandler = (e) =>{
         e.preventDefault();
+        console.log("clicked Register");
         if(data.email.includes("@") && data.password===data.confirmPassword){
             axios.post("https://node-taker-app-backend.onrender.com/users/register", {
                 email: data.email,
                 password: data.password
             }).then(response=>{
+                console.log("receive response");
                 if(response.data.msg==="Registered Successfully"){
                     swal.fire({
                         position: "center",
